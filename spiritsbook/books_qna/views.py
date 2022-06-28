@@ -16,6 +16,8 @@ def search_results(request):
         results_questions = Questions_Answer.objects.filter(question__icontains=searched)
         results_answers = Questions_Answer.objects.filter(answer__icontains=searched)
         results_notes = Questions_Answer.objects.filter(note__icontains=searched)
+
+
         return render(request, 'search_results.html', {
             'searched': searched, 'results_qnumber': results_qnumber,
             'results_questions': results_questions, 'results_answers': results_answers,

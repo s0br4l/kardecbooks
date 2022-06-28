@@ -1,17 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<br/><br/>
+<br/>
 <h1> O Livro dos Espíritos - Allan Kardec </h1><br/><br/>
 
 {%for qna in qna_list %}
     {% if qna.id == qrandom %}
-        <p><strong> Pergunta </strong></p>
-        {{ qna.question }}<br/><br/>
-        <p><strong> Resposta </strong></p>
-        {{ qna.answer }}<br/><br/>
-        <p><strong> Anotações de Kardec </strong></p>
-        {{ qna.note }}<br/><br/>
+        <div class="card">
+          <div class="card-header">
+            <strong> Pergunta </strong>
+          </div>
+          <div class="card-body">
+            {{ qna.question }}
+          </div>
+        </div><br/>
+        <div class="card">
+          <div class="card-header">
+            <strong> Resposta </strong>
+          </div>
+          <div class="card-body">
+            {{ qna.answer }}
+          </div>
+        </div><br/>
+        <div class="card">
+          <div class="card-header">
+            <strong> Anotações de Kardec </strong>
+          </div>
+          <div class="card-body">
+            {{ qna.note }}
+          </div>
+        </div>
     {% endif %}
 {% endfor %}
 

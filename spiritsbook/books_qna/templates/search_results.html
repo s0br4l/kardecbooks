@@ -5,24 +5,51 @@
 <h1> O Livro dos Espíritos - Allan Kardec </h1><br/><br/>
 
     {% if searched %}
-        <h2> Você buscou por ... "{{ searched }}"</h2><br/>
-        <p> Como resultados temos:</p><br/>
-        <p> Númeração das perguntas:<br/>
-        {% for result in results_qnumber %}
-            {{ result.qnumber }} ;
-        {% endfor %}<br/>
-        <p> Dentro das perguntas:<br/>
-        {% for result in results_questions %}
-            <li> {{ result.question}}</li>
-        {% endfor %}<br/>
-        <p> Dentro das respostas:<br/>
-        {% for result in results_answers %}
-            <li>{{ result.answer }}</li>
-        {% endfor %}<br/>
-        <p> Dentro das notas de Kardec:<br/>
-        {% for result in results_notes %}
-            <li>{{ result.note }}</li>
-        {% endfor %}<br/>
+        <h2> Você buscou por "{{ searched }}", como resultados temos:</h2><br/>
+        <br/>
+        <div class="card">
+          <div class="card-header">
+            <strong> Númeração das perguntas: </strong>
+          </div>
+          <div class="card-body">
+              {% for result in results_qnumber %}
+                {{ result.qnumber }}
+              {% endfor %}
+          </div>
+        </div> <br/>
+
+        <div class="card">
+          <div class="card-header">
+            <strong> Dentro das perguntas: </strong>
+          </div>
+          <div class="card-body">
+              {% for result in results_questions %}
+                <li> {{ result.question}}</li>
+              {% endfor %}<br/>
+          </div>
+        </div> <br/>
+
+        <div class="card">
+          <div class="card-header">
+            <strong> Dentro das respostas: </strong>
+          </div>
+          <div class="card-body">
+            {% for result in results_answers %}
+                <li>{{ result.answer }}</li>
+            {% endfor %}<br/>
+          </div>
+        </div> <br/>
+
+        <div class="card">
+          <div class="card-header">
+            <strong> Dentro das notas de Kardec: </strong>
+          </div>
+          <div class="card-body">
+            {% for result in results_notes %}
+                <li>{{ result.note }}</li>
+            {% endfor %}<br/>
+          </div>
+        </div> <br/>
 
 
     {% else %}
@@ -31,3 +58,4 @@
     {% endif %}
 
 {% endblock %}
+
