@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/>
+<h1> O Livro dos Espíritos - Allan Kardec </h1><br/><br/>
+
+
+        <div class="card">
+          <div class="card-header">
+            <strong> Lista de perguntas </strong>
+          </div>
+          <div class="card-body">
+              {%for qna in qnalist %}
+                |<a href="{% url 'qnaid' qna.id %}">{{ qna.qnumber }}</a>|
+              {% endfor %}
+          </div>
+        </div><br/>
+
+{% endblock %}

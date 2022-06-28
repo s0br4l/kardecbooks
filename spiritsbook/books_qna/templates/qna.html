@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/>
+<h1> O Livro dos Espíritos - Allan Kardec </h1><br/><br/>
+
+
+        <div class="card">
+          <div class="card-header">
+            <strong> Pergunta </strong>
+          </div>
+          <div class="card-body">
+            {{ qnaid.question }}
+          </div>
+        </div><br/>
+        <div class="card">
+          <div class="card-header">
+            <strong> Resposta </strong>
+          </div>
+          <div class="card-body">
+            {{ qnaid.answer }}
+          </div>
+        </div><br/>
+        <div class="card">
+          <div class="card-header">
+            <strong> Anotações de Kardec </strong>
+          </div>
+          <div class="card-body">
+            {{ qnaid.note }}
+          </div>
+        </div>
+
+{% endblock %}
