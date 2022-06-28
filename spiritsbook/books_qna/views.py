@@ -25,3 +25,12 @@ def search_results(request):
         })
     else:
         return render(request, 'search_results.html', {})
+
+def qnalist(request):
+    qnalist = Questions_Answer.objects.all()
+    return render(request, 'qnalist.html', {'qnalist': qnalist, })
+
+def qnaid(request, qna_id):
+    qnaid = Questions_Answer.objects.get(pk=qna_id)
+    return render(request, 'qna.html', {'qnaid': qnaid, })
+
