@@ -5,13 +5,14 @@
 <h1> O Livro dos Espíritos - Allan Kardec </h1><br/><br/>
 
 {%for qna in qna_list %}
-    {% if qna.id == qrandom %}
+{% if qrandom %}
+    {% if qna.id == qrandom.id %}
         <div class="card">
           <div class="card-header">
             <strong> Pergunta </strong>
           </div>
           <div class="card-body">
-            {{ qna.question }}
+            {{ qna.qnumber }}. {{ qna.question }}
           </div>
         </div><br/>
         <div class="card">
@@ -31,6 +32,7 @@
           </div>
         </div>
     {% endif %}
+{% endif %}
 {% endfor %}
 
 {% endblock %}

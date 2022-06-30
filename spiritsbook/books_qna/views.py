@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from .models import Questions_Answer
-from random import randint
+from random import choice
 
 
 def home(request):
     qna_list = Questions_Answer.objects.all()
-    count = Questions_Answer.objects.count()
-    qrandom = int(str(Questions_Answer.objects.all()[randint(0, count - 1)]))
+    qrandom = choice(list(qna_list))
+
     return render(request, 'home.html', {'qna_list': qna_list, 'qrandom': qrandom})
 
 def search_results(request):
