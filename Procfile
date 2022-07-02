@@ -1,1 +1,1 @@
-web:gunicorn spiritsbook.wsgi && python manage.py migrate
+web:gunicorn spiritsbook.wsgi
