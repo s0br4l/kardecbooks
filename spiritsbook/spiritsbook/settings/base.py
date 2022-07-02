@@ -69,7 +69,7 @@ WSGI_APPLICATION = 'spiritsbook.wsgi.application'
 load_dotenv(find_dotenv())
 
 DATABASES = {
-    'default':  dj_database_url.config(default="mysql://'root':''@'127.0.0.1':'3306'/'questions_answers'",
+    'default':  dj_database_url.config(default="mysql://'root':''@'127.0.0.1':3306/'questions_answers'",
                                        conn_max_age=600, ssl_require=False)
 }
 
