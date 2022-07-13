@@ -1,1 +1,1 @@
-web:gunicorn spiritsbook.wsgi
+web: gunicorn spiritsbook.wsgi
