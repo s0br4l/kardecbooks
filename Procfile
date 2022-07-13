@@ -1,1 +1,1 @@
-web: gunicorn spiritsbook.spiritsbook.wsgi
+web: cd spiritsbook && gunicorn spiritsbook.wsgi

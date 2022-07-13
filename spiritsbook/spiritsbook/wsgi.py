@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'spiritsbook.spiritsbook.settings.dev')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'spiritsbook.settings.dev')
 
 application = get_wsgi_application()
