@@ -1,1 +1,1 @@
-web: cd spiritsbook && gunicorn spiritsbook.wsgi --timeout 120
+web: cd spiritsbook && gunicorn --timeout 120 spiritsbook.wsgi
