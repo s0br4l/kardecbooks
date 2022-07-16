@@ -8,34 +8,34 @@
 {% if qrandom %}
     {% if qna.id == qrandom.id %}
         {% if qna.question %}
-        <div class="card">
-          <div class="card-header">
-            <strong> Pergunta </strong>
-          </div>
-          <div class="card-body">
-            {{ qna.qnumber }}. {{ qna.question }}
-          </div>
-        </div><br/>
+            <div class="card">
+              <div class="card-header">
+                <strong> Pergunta </strong>
+              </div>
+              <div class="card-body">
+                {{ qna.qnumber }}. {{ qna.question }}
+              </div>
+            </div><br/>
         {% endif %}
         {% if qna.answer %}
-        <div class="card">
-          <div class="card-header">
-            <strong> Resposta </strong>
-          </div>
-          <div class="card-body">
-            {{ qna.answer }}
-          </div>
-        </div><br/>
+            <div class="card">
+              <div class="card-header">
+                <strong> Resposta </strong>
+              </div>
+              <div class="card-body">
+                {{ qna.answer }}
+              </div>
+            </div><br/>
         {% endif %}
         {% if qna.note %}
-        <div class="card">
-          <div class="card-header">
-            <strong> Anotações de Kardec </strong>
-          </div>
-          <div class="card-body">
-            {{ qna.note }}
-          </div>
-        </div>
+            <div class="card">
+              <div class="card-header">
+                <strong> Anotações de Kardec </strong>
+              </div>
+              <div class="card-body">
+                {{ qna.note }}
+              </div>
+            </div>
         {% endif %}
     {% endif %}
 {% endif %}
