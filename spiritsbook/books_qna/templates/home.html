@@ -7,6 +7,7 @@
 {%for qna in qna_list %}
 {% if qrandom %}
     {% if qna.id == qrandom.id %}
+        {% if qna.question %}
         <div class="card">
           <div class="card-header">
             <strong> Pergunta </strong>
@@ -15,6 +16,8 @@
             {{ qna.qnumber }}. {{ qna.question }}
           </div>
         </div><br/>
+        {% endif %}
+        {% if qna.answer %}
         <div class="card">
           <div class="card-header">
             <strong> Resposta </strong>
@@ -23,6 +26,8 @@
             {{ qna.answer }}
           </div>
         </div><br/>
+        {% endif %}
+        {% if qna.note %}
         <div class="card">
           <div class="card-header">
             <strong> Anotações de Kardec </strong>
@@ -31,6 +36,7 @@
             {{ qna.note }}
           </div>
         </div>
+        {% endif %}
     {% endif %}
 {% endif %}
 {% endfor %}

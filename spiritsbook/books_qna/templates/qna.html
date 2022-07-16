@@ -4,7 +4,7 @@
 <br/>
 <h1> O Livro dos Espíritos - Allan Kardec </h1><br/><br/>
 
-
+        {% if qna.question %}
         <div class="card">
           <div class="card-header">
             <strong> Pergunta </strong>
@@ -13,6 +13,8 @@
             {{ qnaid.qnumber }}. {{ qnaid.question }}
           </div>
         </div><br/>
+        {% endif %}
+        {% if qna.answer %}
         <div class="card">
           <div class="card-header">
             <strong> Resposta </strong>
@@ -21,6 +23,8 @@
             {{ qnaid.answer }}
           </div>
         </div><br/>
+        {% endif %}
+        {% if qna.note %}
         <div class="card">
           <div class="card-header">
             <strong> Anotações de Kardec </strong>
@@ -29,5 +33,6 @@
             {{ qnaid.note }}
           </div>
         </div>
+        {% endif %}
 
 {% endblock %}
